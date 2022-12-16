@@ -10,13 +10,16 @@ import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 
+
 function App() {
+
   const [selectedPage, setSelectedPage] = useState("home");
   // const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
-  useEffect(() => {
+
+    useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) setIsTopOfPage(true);
       if (window.scrollY !== 0) setIsTopOfPage(false);
@@ -46,7 +49,7 @@ function App() {
       </div>
       <LineGradient/>
       <div className=" w-5/6 mx-auto">
-          <Projects />
+          <Projects/>
       </div>
       <LineGradient />
       <div className=" w-5/6 mx-auto">

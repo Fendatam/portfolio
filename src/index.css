@@ -12,3 +12,37 @@ body,
   background-color: #010026;
   @apply text-white;
 }
+
+.show {
+  position: relative;
+  background-color: yellow;
+}
+
+.show::before {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: yellow;
+  left: -50%;
+  top: -50%;
+}
+
+@media only screen and (min-width: 1060px) {
+  html {
+    zoom: 100%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  html {
+    zoom: 90%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    zoom: 80%;
+  }
+}

@@ -7,7 +7,7 @@ const MySkills = () => {
     const isDesktop = useMediaQuery("(min-width: 1060px)");
 
     return (
-        <section id="skills" className="pt-2 pb-24">
+        <section id="skills" className="pt-2 pb-24 slo3">
             {/* hing & img */}
             <div className="md:flex md:justify-between md:gap-16 mt-32 items-center">
                 <motion.div
