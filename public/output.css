@@ -1109,19 +1109,19 @@ body,
 
 @media only screen and (min-width: 1060px) {
   html {
-    zoom: 100%;
+    zoom: 110%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   html {
-    zoom: 90%;
+    zoom: 100%;
   }
 }
 
 @media only screen and (min-width: 620px) {
   html {
-    zoom: 80%;
+    zoom: 90%;
   }
 }
 
