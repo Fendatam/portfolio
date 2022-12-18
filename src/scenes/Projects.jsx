@@ -28,17 +28,17 @@ const Project = ({ title, subtitle }) => {
             {subtitle}
         </p>
       </div>
-      <img src={`../assets/${projectTitle}.jpg`} alt={projectTitle} className=" md:max-w-[600px] max-h-[600px] max-w-[400px]"/>
+      <img src={`../assets/${projectTitle}.jpg`} alt={projectTitle} className=" lg:max-w-[600px] max-w-[350px] lg:max-h-[600px] max-h-[300px]"/>
     </motion.div>
   );
 };
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-48 slo4">
+        <section id="projects" className="lg:py-48 py-24 slo4">
             {/* hing */}
                 <motion.div
-                    className=" md:w-2/5 mx-auto text-center"
+                    className=" lg:w-2/5 w-1/5 mx-auto text-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -47,14 +47,14 @@ const Projects = () => {
                     hidden: { opacity: 0, y: -50 },
                     visible: { opacity: 1, y: 0 }
                     }}>
-                    <p className=" font-playfair font-semibold text-5xl">
+                    <p className=" font-playfair font-semibold lg:text-5xl text-3xl">
                       <span className="text-blue">PRO</span>JECTS
                 </p>
-                <div className=" flex justify-center mt-5">
+                <div className=" flex justify-center lg:mt-5 mt-2">
                     <LineGradient width="w-1/3" />
                 </div>
             </motion.div>
-            <div className="flex justify-center mt-16">
+            <div className="flex justify-center lg:mt-16 mt-8">
              <motion.div
                     className="sm:grid sm:grid-cols-2"
                     initial="hidden"
@@ -63,8 +63,8 @@ const Projects = () => {
                     transition={{ duration: 0.5 }}
                    variants={container}>
                 <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              md:max-w-[600px] max-w-[400px] max-h-[600px] text-2xl font-playfair font-semibold"
+            className="flex justify-center text-center items-center lg:p-10 p-5 bg-blue
+            lg:max-w-[600px] max-w-[350px] lg:max-h-[600px] max-h-[300px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
@@ -73,7 +73,7 @@ const Projects = () => {
                     <Project title="Project 2" subtitle="Simple Responsive Website using HTML, CSS and BootStrap"/>
                     <div
             className="flex justify-center text-center items-center p-10 bg-blue
-              md:max-w-[600px] max-w-[400px] max-h-[600px] text-2xl font-playfair font-semibold"
+              lg:max-w-[600px] max-w-[350px] lg:max-h-[600px] max-h-[300px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
           </div>

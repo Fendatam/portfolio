@@ -16,7 +16,7 @@ const Landing = ({ setSelectedPage }) => {
                 {isDesktop ? (
                     <div
                      >
-                        <img alt="profile" src="./assets/prof.png" className=" hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"/>
+                        <img alt="profile" src="./assets/prof.png" className=" hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[300px] lg:max-w-[600px]"/>
                 </div>
                 ) : (
                         <div>
@@ -36,13 +36,13 @@ const Landing = ({ setSelectedPage }) => {
                             hidden: { opacity: 0, x: -50 },
                             visible: { opacity: 1, x: 0 }
                     }}>
-                        <p className=" text-6xl font-playfair z-10 text-center md:text-start">
+                        <p className="lg:text-6xl font-playfair z-10 text-center md:text-start text-3xl">
                         Mohammed {""}
                         <span className="xs:relative text-blue xs:font-semibold z-20 ">
                             Jalal
                         </span>
                     </p>
-                    <p className="mt-10 mb-7 text-md text-center md:text-start">
+                    <p className="mt-10 mb-7 lg:text-lg text-center md:text-start text-sm">
                         A Mechanical Engineer with expertise in frontend web development, I have extensive knowledge and experience in HTML, CSS, and JavaScript. I am also skilled in the use of popular frameworks and libraries such as Bootstrap, Tailwind, and React.js. With my strong technical background and experience in web development, I am confident in my ability to deliver high-quality and effective solutions to any project.
                     </p>
                 </motion.div>
@@ -60,7 +60,7 @@ const Landing = ({ setSelectedPage }) => {
                     <div className="flex xss:items-center xss:justify-center md:justify-start">
 
                     <AnchorLink
-                        className="bg-gradient-rainblue text-deep-blue round-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+                        className="bg-gradient-rainblue text-deep-blue round-sm lg:py-3 lg:px-7 py-1 px-4 font-semibold hover:bg-blue hover:text-white transition duration-500"
                         onClick={() => setSelectedPage("contact")}
                         href="#contact"
                         >
@@ -71,7 +71,7 @@ const Landing = ({ setSelectedPage }) => {
                         onClick={() => setSelectedPage("contact")}
                         href="#contact"
                         >
-                        <div className=" bg-deep-blue hover:text-blue transition duration-500 flex items-center justify-center font-playfair px-7 py-3">
+                        <div className=" bg-deep-blue hover:text-blue transition duration-500 flex items-center justify-center font-playfair lg:px-7 lg:py-3 px-4 py-1">
                             Let's talk.
                         </div>
                     </AnchorLink>   

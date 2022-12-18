@@ -17,7 +17,7 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="py-48 slo">
+        <section id="contact" className="lgg:py-48 py-24 slo">
             {/* Hings */}
             <motion.div
                  initial="hidden"
@@ -31,10 +31,10 @@ const Contact = () => {
                 className="flex justify-end w-full"
                  >
                 <div>
-                <p className="font-playfair font-semibold text-4xl">
+                <p className="font-playfair font-semibold lgg:text-4xl text-2xl">
                     <span className="text-yellow">CONTACT ME</span> TO GET STARTED
                 </p>
-                <div className="flex md:justify-end my-5">
+                <div className="flex md:justify-end lgg:my-5 my-2">
                     <LineGradient width="w-1/2" />
                 </div>
                 </div>
@@ -50,7 +50,7 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 flex justify-center h-[50%] hover:filter hover:saturate-200 transition duration-500 "
+          className="lgg:basis-1/2 flex justify-center lgg:h-[50%] h-[30%] hover:filter hover:saturate-200 transition duration-500 "
         >
           <img src="../assets/contact.png" alt="contact" />
         </motion.div>
@@ -64,7 +64,7 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 mt-10 md:mt-0"
+          className="lgg:basis-1/2 w-[50%] mt-10 md:mt-0"
         >
           <form
             target="_blank"
@@ -125,7 +125,7 @@ const Contact = () => {
             )}
 
             <button
-              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
+              className="lgg:p-5 p-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
               type="submit"
             >
               SEND ME A MESSAGE

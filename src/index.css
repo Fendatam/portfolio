@@ -29,20 +29,43 @@ body,
   top: -50%;
 }
 
-@media only screen and (min-width: 1060px) {
-  html {
-    zoom: 110%;
-  }
-}
+/* @media (max-width: 1000px) and (-webkit-device-pixel-ratio:1.5) {
 
-@media only screen and (min-width: 768px) {
-  html {
-    zoom: 100%;
-  }
-}
-
-@media only screen and (min-width: 620px) {
-  html {
+  html,
+  body,
+  #root,
+  * {
     zoom: 90%;
   }
 }
+
+@media (max-width: 800px) and (-webkit-device-pixel-ratio:1.5) {
+
+  html,
+  body,
+  #root,
+  * {
+    zoom: 80%;
+  }
+}
+
+@media (max-width: 600px) and (-webkit-device-pixel-ratio:1.5) {
+
+  html,
+  body,
+  #root,
+  * {
+    zoom: 70%;
+  }
+}
+@media (max-width: 500px) {
+
+  html,
+    body,
+    #root,
+    * {
+      zoom: 60%;
+    }
+}
+
+*/
