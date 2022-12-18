@@ -38,7 +38,7 @@ const Projects = () => {
         <section id="projects" className="lg:py-48 py-24 slo4">
             {/* hing */}
                 <motion.div
-                    className=" lg:w-2/5 w-1/5 mx-auto text-center"
+                    className="w-2/5 mx-auto text-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}

@@ -64,7 +64,7 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="lgg:basis-1/2 w-[50%] mt-10 md:mt-0"
+          className="lgg:basis-1/2 md:w-[50%] mt-10 md:mt-0"
         >
           <form
             target="_blank"

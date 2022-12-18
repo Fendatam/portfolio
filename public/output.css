@@ -824,6 +824,14 @@ video {
   width: 20%;
 }
 
+.w-2\/5{
+  width: 40%;
+}
+
+.w-3\/4{
+  width: 75%;
+}
+
 .max-w-\[300px\]{
   max-width: 300px;
 }
@@ -1306,6 +1314,10 @@ body,
 
   .md\:w-3\/4{
     width: 75%;
+  }
+
+  .md\:w-\[50\%\]{
+    width: 50%;
   }
 
   .md\:max-w-\[600px\]{
