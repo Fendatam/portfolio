@@ -94,7 +94,7 @@ const MySkills = () => {
                                 <p className=" font-playfair font-semibold lg:text-3xl text-md">Data Analysis</p>
                             </div>
                         <div className="w-full md:w-3/4 lg:h-24 h-16 bg-blue absolute right-0 top-0 z-[-1]" />
-                        <p className="mt-5">Proficient at using data analysis tools such as MS-EXCEL, R-Studio and MS-Power BI. Able to present data in a visually pleasing, easily coprehensible manner.</p>
+                        <p className="mt-5">Proficient at using data analysis tools such as MS-EXCEL, R-Studio and MS-Power BI. Able to present data in a visually pleasing, easily comprehensible manner.</p>
                         </div>
                     </motion.div>
 
