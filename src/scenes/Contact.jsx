@@ -3,13 +3,14 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-
+import { useState } from "react";
 // import { useNavigate} from 'react-router-dom';
 
 
 const Contact = () => {
   // const navigate = useNavigate();
-  
+  const [isButton, setIsButton] = useState(false);
+
   // const navigatetothanks = () => { 
   //   navigate('/Thanks');
   // }
@@ -38,6 +39,7 @@ const Contact = () => {
       }, (error) => {
         console.log(error.text);
       });
+    setIsButton(!isButton);
   }
     
 
@@ -90,76 +92,76 @@ const Contact = () => {
           }}
           className="lgg:basis-1/2 md:w-[50%] mt-10 md:mt-0"
           >
-           
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-              method="POST"
-              ref={form}
-            >
+            {!isButton ? (
+              <form
+                target="_blank"
+                onSubmit={onSubmit}
+                method="POST"
+                ref={form}
+              >
              
-            <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
-              type="text"
-              placeholder="NAME"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
-            />
-            {errors.name && (
-              <p className="text-red mt-1">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
+                <input
+                  className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+                  type="text"
+                  placeholder="NAME"
+                  {...register("name", {
+                    required: true,
+                    maxLength: 100,
+                  })}
+                />
+                {errors.name && (
+                  <p className="text-red mt-1">
+                    {errors.name.type === "required" && "This field is required."}
+                    {errors.name.type === "maxLength" && "Max length is 100 char."}
+                  </p>
+                )}
 
-            <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
-              type="text"
-              placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
-            />
-            {errors.email && (
-              <p className="text-red mt-1">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
+                <input
+                  className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                  type="text"
+                  placeholder="EMAIL"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  })}
+                />
+                {errors.email && (
+                  <p className="text-red mt-1">
+                    {errors.email.type === "required" && "This field is required."}
+                    {errors.email.type === "pattern" && "Invalid email address."}
+                  </p>
+                )}
 
-            <textarea
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
-              name="message"
-              placeholder="MESSAGE"
-              rows="4"
-              cols="50"
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
-            />
-            {errors.message && (
-              <p className="text-red mt-1">
-                {errors.message.type === "required" &&
-                  "This field is required."}
-                {errors.message.type === "maxLength" &&
-                  "Max length is 2000 char."}
-              </p>
-            )}
+                <textarea
+                  className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                  name="message"
+                  placeholder="MESSAGE"
+                  rows="4"
+                  cols="50"
+                  {...register("message", {
+                    required: true,
+                    maxLength: 2000,
+                  })}
+                />
+                {errors.message && (
+                  <p className="text-red mt-1">
+                    {errors.message.type === "required" &&
+                      "This field is required."}
+                    {errors.message.type === "maxLength" &&
+                      "Max length is 2000 char."}
+                  </p>
+                )}
 
               
-              <button
-              className="lgg:p-5 p-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
-                type="submit"
-                onClick={onSubmit}
-              >
-              Send Message
-            </button>
+                <button
+                  className="lgg:p-5 p-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
+                  type="submit"
+                  onClick={ onSubmit }
+                >
+                  Send Message
+                </button>
           
-              </form>
+              </form>) : (<div className="text-center relative top-[30%] md:text-3xl text-blue font-playfair font-semibold text-3xl"><h1>Thank You</h1><h1>Your Response was recorded and I will get back to you soon</h1></div>)}
           </motion.div>
         </div>
         
