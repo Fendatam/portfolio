@@ -1,20 +1,45 @@
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import { useState } from "react";
+// import { useNavigate} from 'react-router-dom';
+
 
 const Contact = () => {
+  // const navigate = useNavigate();
+  
+  // const navigatetothanks = () => { 
+  //   navigate('/Thanks');
+  // }
+
+    const form = useRef();
+
     const {
         register,
-        trigger,
-        formState: { errors }
-    } = useForm();
+        formState: { errors },
+  } = useForm();
+  
+  // let User = {
+  //   name: "",
+  //   email: "",
+  //   message: ""  
+  // }
+  // console.log(watch(User));
+  const [isButton, setIsButton] = useState(false);
 
-    const onSubmit = async (e) => {
-        const isValid = await trigger();
-        if (!isValid) {
-            e.preventDefault();
-        }
-    }
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1mxnmb9', 'template_17og4g4', form.current, '1JjDZSGymeAgl-ixP')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+    
 
     return (
         <section id="contact" className="lgg:py-48 py-24 slo">
@@ -65,13 +90,15 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
           className="lgg:basis-1/2 md:w-[50%] mt-10 md:mt-0"
-        >
+          >
+            { !isButton ? (
           <form
             target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/mohammed_jelal@hotmail.com"
-            method="POST"
-          >
+              method="POST"
+              ref={form}
+            >
+             
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
@@ -124,15 +151,21 @@ const Contact = () => {
               </p>
             )}
 
-            <button
+              
+              <button
               className="lgg:p-5 p-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
-              type="submit"
-            >
-              SEND ME A MESSAGE
+                type="submit"
+                onClick={() => setIsButton(!isButton)}
+              >
+              Send Message
             </button>
-          </form>
-            </motion.div>
-                </div>
+          
+              </form>
+            ) : (<div className="text-center justify-center items-center flex-col relative md:top-[30%] md:text-4xl text-3xl font-playfair text-blue font-semibold "><h1>Thank You</h1><h1>For Your Submission</h1></div>)}
+          </motion.div>
+
+        </div>
+        
         </section>
     )
 };

@@ -68,7 +68,7 @@ const MySkills = () => {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0 }
                     }}>
-                        <div className="relative mb-16">
+                        <div className="relative mb-8">
                             <div className=" z-10 ">
                                 <p className=" font-playfair font-semibold lg:text-5xl text-2xl">02</p>
                                 <p className=" font-playfair font-semibold lg:text-3xl text-md">UX/UI Design</p>
