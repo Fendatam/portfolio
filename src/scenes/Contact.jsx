@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { useState } from "react";
+
 // import { useNavigate} from 'react-router-dom';
 
 
@@ -27,7 +27,7 @@ const Contact = () => {
   //   message: ""  
   // }
   // console.log(watch(User));
-  const [isButton, setIsButton] = useState(false);
+ 
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -79,7 +79,6 @@ const Contact = () => {
         >
           <img src="../assets/contact.png" alt="contact" />
         </motion.div>
-
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -91,7 +90,7 @@ const Contact = () => {
           }}
           className="lgg:basis-1/2 md:w-[50%] mt-10 md:mt-0"
           >
-            { !isButton ? (
+           
           <form
             target="_blank"
             onSubmit={onSubmit}
@@ -155,15 +154,13 @@ const Contact = () => {
               <button
               className="lgg:p-5 p-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
                 type="submit"
-                onClick={() => setIsButton(!isButton)}
+                onClick={onSubmit}
               >
               Send Message
             </button>
           
               </form>
-            ) : (<div className="text-center justify-center items-center flex-col relative md:top-[30%] md:text-4xl text-3xl font-playfair text-blue font-semibold "><h1>Thank You</h1><h1>For Your Submission</h1></div>)}
           </motion.div>
-
         </div>
         
         </section>
