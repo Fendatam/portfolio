@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background-color: #010026;
+  @apply text-white;
+}
+
+.show {
+  position: relative;
+  background-color: yellow;
+}
+
+.show::before {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: yellow;
+  left: -50%;
+  top: -50%;
+}
+
+/* @media (max-width: 1000px) and (-webkit-device-pixel-ratio:1.5) {
+
+  html,
+  body,
+  #root,
+  * {
+    zoom: 90%;
+  }
+}
+
+@media (max-width: 800px) and (-webkit-device-pixel-ratio:1.5) {
+
+  html,
+  body,
+  #root,
+  * {
+    zoom: 80%;
+  }
+}
+
+@media (max-width: 600px) and (-webkit-device-pixel-ratio:1.5) {
+
+  html,
+  body,
+  #root,
+  * {
+    zoom: 70%;
+  }
+}
+@media (max-width: 500px) {
+
+  html,
+    body,
+    #root,
+    * {
+      zoom: 60%;
+    }
+}
+
+*/
