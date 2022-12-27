@@ -68,15 +68,10 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-                    <Project title="Project 1" subtitle="Lana Del Rey Fan Page landing page. Used a couple of toggle animations, text animations and intersection observer animation. HTML, CSS, vanilla JS and BootStrap"/>
+                    <a href="https://fendatam.github.io/" target="_blank" rel="noreferrer"><Project title="Project 1" subtitle="Lana Del Rey Fan Page landing page. Used a couple of toggle animations, text animations and intersection observer animation. HTML, CSS, vanilla JS and BootStrap"/></a>
                      {/* ROW 2 */}
                     <Project title="Project 2" subtitle="Simple Responsive Website using HTML, CSS and BootStrap"/>
-                    <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              lg:max-w-[600px] max-w-[350px] lg:max-h-[600px] max-h-[300px] text-2xl font-playfair font-semibold"
-          >
-            SMOOTH USER EXPERIENCE
-          </div>
+                    <a href="https://netflix-clone907.vercel.app/" target="_blank" rel="noreferrer"><Project title="Project 3" subtitle="Netflix Landing page clone + Sign-in page using React.js and tailwind"/></a>
                     </motion.div>
                     </div>
         </section>

@@ -59,7 +59,7 @@ const Contact = () => {
                  >
                 <div>
                 <p className="font-playfair font-semibold lgg:text-4xl text-2xl">
-                    <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+                    <span className="text-yellow">CONTACT ME</span> FOR INQUIRIES
                 </p>
                 <div className="flex md:justify-end lgg:my-5 my-2">
                     <LineGradient width="w-1/2" />
