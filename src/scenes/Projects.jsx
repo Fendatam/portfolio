@@ -68,7 +68,7 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-                    <a href="https://fendatam.github.io/" target="_blank" rel="noreferrer"><Project title="Project 1" subtitle="Lana Del Rey Fan Page landing page. Used a couple of toggle animations, text animations and intersection observer animation. HTML, CSS, vanilla JS and BootStrap"/></a>
+                    <a href="https://arab-builders.vercel.app" target="_blank" rel="noreferrer"><Project title="Project 1" subtitle="A website I designed for a construction company. I used React.js, Framer motion, react slick slider, tailwindcss and email.js"/></a>
                      {/* ROW 2 */}
                     <Project title="Project 2" subtitle="Simple Responsive Website using HTML, CSS and BootStrap"/>
                     <a href="https://netflix-clone907.vercel.app/" target="_blank" rel="noreferrer"><Project title="Project 3" subtitle="Netflix Landing page clone + Sign-in page using React.js and tailwind"/></a>
